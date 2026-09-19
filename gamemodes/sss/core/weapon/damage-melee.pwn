@@ -120,16 +120,16 @@ _HandleCustomMelee(playerid, ItemType:itemtype)
 				GetPlayerFacingAngle(i, pa);
 				angle = absoluteangle(pa - GetAngleToPoint(ix, iy, px, py));
 
-				if(angle > 135.0 || angle < 225.0)
+				if(135.0 < angle < 225.0)
 					ApplyAnimation(i, "PED", "DAM_stomach_frmBK", 4.1, 0, 1, 1, 0, 0, 1); // FROM BACK
 
 				if(angle > 315.0 || angle < 45.0)
 					ApplyAnimation(i, "PED", "DAM_stomach_frmFT", 4.1, 0, 1, 1, 0, 0, 1); // FROM FRONT
 
-				if(angle > 45.0 || angle < 135.0)
+				if(45.0 < angle < 135.0)
 					ApplyAnimation(i, "PED", "DAM_stomach_frmLT", 4.1, 0, 1, 1, 0, 0, 1); // FROM LEFT
 
-				if(angle > 225.0 || angle < 315.0)
+				if(225.0 < angle < 315.0)
 					ApplyAnimation(i, "PED", "DAM_stomach_frmRT", 4.1, 0, 1, 1, 0, 0, 1); // FROM RIGHT
 
 				_DoMeleeDamage(playerid, i, GetItemTypeWeaponMuzzVelocity(itemtype), Float:GetItemTypeWeaponMagSize(itemtype));

@@ -76,7 +76,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 			foreach(new i : Player)
 			{
-				if(IsPlayerInVehicle(i, anj_CurrentlyEntering[playerid]) && GetPlayerState(targetid) == PLAYER_STATE_DRIVER)
+				if(IsPlayerInVehicle(i, anj_CurrentlyEntering[playerid]) && GetPlayerState(i) == PLAYER_STATE_DRIVER)
 				{
 					targetid = i;
 					break;

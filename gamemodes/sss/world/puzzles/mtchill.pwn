@@ -278,6 +278,12 @@ hook OnPlayerUseItemWithBtn(playerid, Button:buttonid, Item:itemid)
 			ch_keypadprt = CreateDynamicObject(18724, -2311.4900, -1647.7000, 482.3600, 0.0000, 0.0000, 26.2200);
 			defer ch_keypadprt_destroy();
 			defer ch_keypad_move();
+
+			// The button that would normally trigger OnPlayerActivateDoor
+			// for this door was just destroyed above, so force the door
+			// open directly here instead of leaving it permanently stuck.
+			ch_doorstate = true;
+			OpenDoor(ch_door);
 		}
 	}
 

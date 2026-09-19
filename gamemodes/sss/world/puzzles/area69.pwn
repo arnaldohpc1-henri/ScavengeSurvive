@@ -373,7 +373,7 @@ hook OnButtonPress(playerid, Button:buttonid)
 			ShowKeypad(playerid, k_StorageWatch, code_StorageWatch);
 
 			if(GetItemType(GetPlayerItem(playerid)) == item_HackDevice)
-				HackKeypad(playerid, k_StorageWatch, code_ControlTower);
+				HackKeypad(playerid, k_StorageWatch, code_StorageWatch);
 		}
 		else
 		{

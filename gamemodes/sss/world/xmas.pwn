@@ -37,8 +37,7 @@ CreateXmasTree(Float:x, Float:y, Float:z, Float:rx, Float:ry, Float:rz)
 	box_z = z + 0.6248;
 
 	CreateDynamicObject(xmas_presents[random(4)], box_x, box_y, box_z, 0.0, 0.0, frandom(360.0));
-	// TODO: FIX CHRISTMAS!
-	// containerid = CreateContainer("Christmas Present", 10, CreateButton(box_x, box_y, box_z + 1.0, "Merry Christmas!"));
+	containerid = CreateContainer("Christmas Present", 10);
 
 	FillContainerWithLoot(containerid, random(10) + 1, GetLootIndexFromName("world_military"));
 

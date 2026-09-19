@@ -174,12 +174,12 @@ hook OnButtonPress(playerid, Button:buttonid)
 	{
 		if(LiftPos)
 		{
-		    MoveDynamicObject(CaveLift, -2759.4704, 3756.8691, 45.4, 2.0, 270, 180, 340.9);
+		    MoveDynamicObject(CaveLift, -2759.4704, 3756.8691, 6.9, 2.0, 270, 180, 340.9);
 		    LiftPos=0;
 		}
 		else
 		{
-		    MoveDynamicObject(CaveLift, -2759.4704, 3756.8691, 6.9, 2.0, 270, 180, 340.9);
+		    MoveDynamicObject(CaveLift, -2759.4704, 3756.8691, 45.4, 2.0, 270, 180, 340.9);
 		    LiftPos=1;
 		}
 	}

@@ -107,7 +107,7 @@ func Run(cfg Config) error {
 
 func shouldEnsure(dir string) bool {
 	if isDirEmpty(dir) {
-		zap.L().Info("Current directory is empty, cloning new copy of Scavenge and Survive")
+		zap.L().Info("Current directory is empty, cloning new copy of Nordeste DayZ")
 		if err := Ensure(); err != nil {
 			panic(errors.Wrap(err, "failed to ensure"))
 		}

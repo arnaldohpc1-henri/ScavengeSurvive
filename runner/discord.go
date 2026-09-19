@@ -49,7 +49,7 @@ func runDiscord(ctx context.Context, ps *pubsub.PubSub, cfg Config) {
 		panic(err)
 	}
 
-	discord.ChannelMessageSend(cfg.DiscordChannelInfo, "Scavenge and Survive server starting!") //nolint:errcheck
+	discord.ChannelMessageSend(cfg.DiscordChannelInfo, "Nordeste DayZ server starting!") //nolint:errcheck
 
 	discord.AddHandler(func(s *discordgo.Session, m *discordgo.MessageCreate) {
 		switch m.Message.Content {

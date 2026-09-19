@@ -177,7 +177,7 @@ Dialog_ShowCraftHelp(playerid)
 	gBigString[playerid][0] = EOS;
 
 	strcat(gBigString[playerid], "Crafting is a way to create new items from existing items.\n");
-	strcat(gBigString[playerid], "There are three ways to combine items in Scavenge and Survive:\n\n");
+	strcat(gBigString[playerid], "There are three ways to combine items in Nordeste DayZ:\n\n");
 
 	strcat(gBigString[playerid], C_YELLOW"In Inventory Screens (Aka: Crafting or Combining):\n\n");
 	strcat(gBigString[playerid], C_WHITE"While viewing your inventory or a container (vehicle trunk, box, bag, etc)\n");

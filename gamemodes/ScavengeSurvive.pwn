@@ -614,7 +614,7 @@ Text:RestartCount = Text:INVALID_TEXT_DRAW;
 
 main()
 {
-	print("[main] Finished initialising Southclaws' Scavenge and Survive");
+	print("[main] Finished initialising Nordeste DayZ");
 
 	gServerInitialising = false;
 	gServerInitialiseTick = GetTickCount();
@@ -642,7 +642,7 @@ OnGameModeInit_Setup()
 		for(;;){}
 	}
 
-	Logger_Log("Initialising Scavenge and Survive", Logger_I("build", gBuildNumber));
+	Logger_Log("Initialising Nordeste DayZ", Logger_I("build", gBuildNumber));
 
 	Streamer_ToggleErrorCallback(true);
 
@@ -727,7 +727,7 @@ RestartGamemode()
 	SendRconCommand("gmx");
 
 	ChatMsgAll(BLUE, " ");
-	ChatMsgAll(ORANGE, "Scavenge and Survive");
+	ChatMsgAll(ORANGE, "Nordeste DayZ");
 	ChatMsgAll(BLUE, "    Copyright (C) 2020 Barnaby \"Southclaws\" Keene");
 	ChatMsgAll(BLUE, "    This Source Code Form is subject to the terms of the Mozilla Public");
 	ChatMsgAll(BLUE, "    License, v. 2.0. If a copy of the MPL was not distributed with this");

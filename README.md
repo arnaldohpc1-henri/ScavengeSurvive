@@ -1,8 +1,8 @@
-# Scavenge and Survive
+# Nordeste DayZ
 
 ## Overview
 
-Scavenge and Survive is a PvP SA:MP survival gamemode. The aim of the game is to
+Nordeste DayZ is a PvP SA:MP survival gamemode. The aim of the game is to
 find supplies such as tools or weapons to help you survive, either alone or in a
 group.
 
@@ -21,7 +21,7 @@ access the gamemode-specific features.
 
 ### Requirements
 
-To get started with Scavenge and Survive, you need the following tools installed
+To get started with Nordeste DayZ, you need the following tools installed
 on your computer:
 
 - [Git](https://git-scm.com) To clone the repository and provide functionality
@@ -41,7 +41,7 @@ Clone the repository to your computer using Git (Or the GitHub desktop app, if
 you prefer that)
 
 ```
-git clone https://github.com/Southclaws/ScavengeSurvive.git
+git clone https://github.com/arnaldohpc1-henri/ScavengeSurvive.git
 ```
 
 Now, open the directory in your favourite IDE. I recommend vscode. As long as
@@ -57,7 +57,7 @@ sampctl build
 
 When on `master` branch, this should finish with no errors. You can check the
 state of the `master` branch here:
-https://github.com/Southclaws/ScavengeSurvive/actions?query=workflow%3Abuild if
+https://github.com/arnaldohpc1-henri/ScavengeSurvive/actions?query=workflow%3Abuild if
 the topmost item has a ✅ then the latest commit on `master` will compile with
 no errors.
 
@@ -97,7 +97,7 @@ machine either manually or using an automation tool such as
 [Pico](https://pico.sh)
 
 ```
-git clone https://github.com/Southclaws/ScavengeSurvive.git
+git clone https://github.com/arnaldohpc1-henri/ScavengeSurvive.git
 ```
 
 Now you just need to run Docker Compose, which will build the image if necessary

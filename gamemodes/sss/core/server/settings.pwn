@@ -48,7 +48,7 @@ LoadSettings()
 	// I'd still like to be credited for my work. Many servers have claimed
 	// they are the sole creator of the mode and this makes me sad and very
 	// hesitant to release my work completely free of charge.
-	SetGameModeText("Scavenge Survive by Southclaws");
+	SetGameModeText("Nordeste DayZ");
 }
 
 

@@ -48,7 +48,7 @@ CMD:admins(playerid, params[])
 
 CMD:credits(playerid, params[])
 {
-	ChatMsg(playerid, YELLOW, " >  Scavenge and Survive is developed by Southclaws (www.southcla.ws) and the following contributors:");
+	ChatMsg(playerid, YELLOW, " >  Nordeste DayZ runs on code originally developed by Southclaws (www.southcla.ws) and the following contributors:");
 	ChatMsg(playerid, BLUE, " >  Y_Less - Tons of useful code, libraries and conversations");
 	ChatMsg(playerid, BLUE, " >  Viruxe - Lots of anti-cheat work");
 	ChatMsg(playerid, BLUE, " >  Kadaradam - Fishing, Trees and lots of bug fixes");

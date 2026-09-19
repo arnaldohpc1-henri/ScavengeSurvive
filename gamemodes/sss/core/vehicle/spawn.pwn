@@ -227,6 +227,8 @@ LoadVehiclesFromFile(file[])
 				{
 					if(!_CatStringToInts(categories, veh_SpawnData[count][vspawn_categories], strlen(categories)))
 						err("[Vehicle] Invalid category character in '%s':%d", file, linenum);
+
+					maxcategories = strlen(categories);
 				}
 
 				/*
@@ -249,6 +251,8 @@ LoadVehiclesFromFile(file[])
 				{
 					if(!_SizeStringToInts(sizes, veh_SpawnData[count][vspawn_sizes], strlen(sizes)))
 						err("[Vehicle] Invalid size character in '%s':%d", file, linenum);
+
+					maxsizes = strlen(sizes);
 				}
 
 				type = PickRandomVehicleTypeFromGroup(veh_SpawnData[count][vspawn_group], veh_SpawnData[count][vspawn_categories], maxcategories, veh_SpawnData[count][vspawn_sizes], maxsizes);

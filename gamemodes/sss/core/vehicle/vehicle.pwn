@@ -460,13 +460,13 @@ PlayerVehicleUpdate(playerid)
 		PlayerTextDrawColor(playerid, veh_DamageUI[playerid], VEHICLE_HEALTH_CHUNK_1_COLOUR);
 
 	else if(health <= VEHICLE_HEALTH_CHUNK_2)
-		PlayerTextDrawColor(playerid, veh_DamageUI[playerid], VEHICLE_HEALTH_CHUNK_1_COLOUR);
-
-	else if(health <= VEHICLE_HEALTH_CHUNK_3)
 		PlayerTextDrawColor(playerid, veh_DamageUI[playerid], VEHICLE_HEALTH_CHUNK_2_COLOUR);
 
-	else if(health <= VEHICLE_HEALTH_CHUNK_4)
+	else if(health <= VEHICLE_HEALTH_CHUNK_3)
 		PlayerTextDrawColor(playerid, veh_DamageUI[playerid], VEHICLE_HEALTH_CHUNK_3_COLOUR);
+
+	else if(health <= VEHICLE_HEALTH_CHUNK_4)
+		PlayerTextDrawColor(playerid, veh_DamageUI[playerid], VEHICLE_HEALTH_CHUNK_4_COLOUR);
 
 	else if(health <= VEHICLE_HEALTH_MAX)
 		PlayerTextDrawColor(playerid, veh_DamageUI[playerid], VEHICLE_HEALTH_CHUNK_4_COLOUR);

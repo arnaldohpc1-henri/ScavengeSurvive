@@ -111,7 +111,7 @@ StartRepairingVehicle(playerid, vehicleid)
 	}
 
 	ApplyAnimation(playerid, "INT_SHOP", "SHOP_CASHIER", 4.0, 1, 0, 0, 0, 0, 1);
-	VehicleBonnetState(fix_TargetVehicle[playerid], 1);
+	VehicleBonnetState(vehicleid, 1);
 	StartHoldAction(playerid, 50000, floatround(fix_Progress[playerid] * 50));
 
 	fix_TargetVehicle[playerid] = vehicleid;

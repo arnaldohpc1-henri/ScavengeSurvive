@@ -60,7 +60,6 @@ hook OnMachineFinish(Item:itemid, Container:containerid)
 	{
 		GetContainerSlotItem(containerid, i, subitemid);
 		DestroyItem(subitemid);
-		itemcount++;
 	}
 
 	for(new i; i < itemcount; i++)

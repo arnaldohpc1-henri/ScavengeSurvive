@@ -68,18 +68,19 @@ hook OnMachineFinish(Item:itemid, Container:containerid)
 	new
 		Item:subitemid,
 		Float:amounts[MAX_MACHINE_ITEMS],
-		itemcount;
+		itemcount,
+		outcount;
 
 	GetContainerItemCount(containerid, itemcount);
 	for(new i = itemcount - 1; i > -1; i--)
 	{
 		GetContainerSlotItem(containerid, i, subitemid);
-		amounts[itemcount] = GetLiquidItemLiquidAmount(subitemid);
+		amounts[outcount] = GetLiquidItemLiquidAmount(subitemid);
 		DestroyItem(subitemid);
-		itemcount++;
+		outcount++;
 	}
 
-	for(new i; i < itemcount; i++)
+	for(new i; i < outcount; i++)
 	{
 		subitemid = CreateItem(item_Bottle);
 		AddItemToContainer(containerid, subitemid);

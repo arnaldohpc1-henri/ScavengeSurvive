@@ -18,6 +18,11 @@
 
 #define DIRECTORY_SAFEBOX	DIRECTORY_MAIN"safebox/"
 
+// Must be at least as large as the biggest `size` passed to any
+// DefineSafeboxType call (see server/init.pwn) - currently 16, used by
+// item_Workbench and item_Locker.
+#define MAX_SAFEBOX_ITEMS	(16)
+
 
 forward OnSafeboxLoad(Item:itemid, active, uuid[], data[], length);
 
@@ -211,7 +216,7 @@ SaveSafeboxItem(Item:itemid, bool:active = true)
 	}
 
 	new
-		Item:items[12],
+		Item:items[MAX_SAFEBOX_ITEMS],
 		itemcount,
 		size;
 

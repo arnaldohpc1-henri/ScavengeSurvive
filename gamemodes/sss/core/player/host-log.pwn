@@ -16,6 +16,8 @@
 #include <YSI_Coding\y_hooks>
 
 
+#define MAX_HOST_LOG_RESULTS	(48)
+
 #define ACCOUNTS_TABLE_HOST		"host_log"
 #define FIELD_HOST_NAME			"name"		// 00
 #define FIELD_HOST_HOST			"host"		// 01
@@ -60,7 +62,7 @@ hook OnPlayerConnect(playerid)
 	GetPlayerHost(playerid);
 }
 
-stock GetAccountHostHistoryFromHost(inputhost[], output[][e_host_list_output_structure], &count)
+stock GetAccountHostHistoryFromHost(inputhost[], output[][e_host_list_output_structure], max, &count)
 {
 	new
 		name[MAX_PLAYER_NAME],
@@ -75,7 +77,7 @@ stock GetAccountHostHistoryFromHost(inputhost[], output[][e_host_list_output_str
 	if(!stmt_execute(stmt_HostGetRecordsFromHost))
 		return 0;
 
-	while(stmt_fetch_row(stmt_HostGetRecordsFromHost))
+	while(stmt_fetch_row(stmt_HostGetRecordsFromHost) && count < max)
 	{
 		output[count][host_name] = name;
 		output[count][host_host] = host;
@@ -87,7 +89,7 @@ stock GetAccountHostHistoryFromHost(inputhost[], output[][e_host_list_output_str
 	return 1;
 }
 
-stock GetAccountHostHistoryFromName(inputname[], output[][e_host_list_output_structure], &count)
+stock GetAccountHostHistoryFromName(inputname[], output[][e_host_list_output_structure], max, &count)
 {
 	new
 		name[MAX_PLAYER_NAME],
@@ -102,7 +104,7 @@ stock GetAccountHostHistoryFromName(inputname[], output[][e_host_list_output_str
 	if(!stmt_execute(stmt_HostGetRecordsFromName))
 		return 0;
 
-	while(stmt_fetch_row(stmt_HostGetRecordsFromName))
+	while(stmt_fetch_row(stmt_HostGetRecordsFromName) && count < max)
 	{
 		output[count][host_name] = name;
 		output[count][host_host] = host;
@@ -144,10 +146,10 @@ ACMD:hhname[4](playerid, params[])
 	}
 
 	new
-		list[48][e_host_list_output_structure],
+		list[MAX_HOST_LOG_RESULTS][e_host_list_output_structure],
 		count;
 
-	if(!GetAccountHostHistoryFromName(params, list, count))
+	if(!GetAccountHostHistoryFromName(params, list, MAX_HOST_LOG_RESULTS, count))
 	{
 		Msg(playerid, YELLOW, " >  Failed");
 		return 1;
@@ -214,10 +216,10 @@ public OnReverseDNS(ip[], host[], extra)
 		SendingRequest[extra] = false;
 
 		new
-			list[48][e_host_list_output_structure],
+			list[MAX_HOST_LOG_RESULTS][e_host_list_output_structure],
 			count;
 
-		if(!GetAccountHostHistoryFromHost(host, list, count))
+		if(!GetAccountHostHistoryFromHost(host, list, MAX_HOST_LOG_RESULTS, count))
 		{
 			Msg(extra, YELLOW, " >  Failed");
 			return 1;

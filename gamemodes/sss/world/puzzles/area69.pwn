@@ -387,7 +387,7 @@ hook OnButtonPress(playerid, Button:buttonid)
 hook OnPlayerActivateDoor(playerid, doorid, newstate)
 {
 	if(doorid == door_Main)
-		return PlayerActivateDoorButton(playerid, k_MainGate, code_ControlTower);
+		return PlayerActivateDoorButton(playerid, k_MainGate, code_MainGate);
 
 	if(doorid == door_Airstrip)
 		return PlayerActivateDoorButton(playerid, k_AirstripGate, code_AirstripGate);

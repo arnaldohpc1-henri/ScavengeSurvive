@@ -490,7 +490,7 @@ IsAtDefaultPos(Float:x, Float:y, Float:z)
 
 IsAtConnectionPos(Float:x, Float:y, Float:z)
 {
-	if(1133.05 < x < 1133.059999 && -2038.40 < y < -2038.409999 && 69.09 < z < 69.099999)
+	if(1133.05 < x < 1133.059999 && -2038.409999 < y < -2038.40 && 69.09 < z < 69.099999)
 		return 1;
 
 	return 0;

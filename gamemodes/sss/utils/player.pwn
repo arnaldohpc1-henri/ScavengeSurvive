@@ -358,7 +358,7 @@ new CameraModeNames[66][37]=
 
 stock GetCameraModeName(cameramode, output[])
 {
-	if(!(0 <= cameramode <= 66))
+	if(!(0 <= cameramode < 66))
 		return 0;
 
 	output[0] = EOS;
